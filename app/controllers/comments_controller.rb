@@ -5,6 +5,7 @@ def create
     redirect_to prototype_path(@comment.prototype)
   else
     @prototype = @comment.prototype
+    @comments = @prototype.comments
     render '/prototypes/show'
   end
 end
