@@ -1,5 +1,4 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!
   def index
     @prototypes = Prototype.all
   end
@@ -25,7 +24,6 @@ class PrototypesController < ApplicationController
 
   def edit
     @prototype = Prototype.find(params[:id])
-    render 'form'
   end
 
   def update
